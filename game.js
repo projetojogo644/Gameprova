@@ -320,10 +320,10 @@ class GameEngine {
         let speedMult = 1 + (this.level - 1) * 0.25;
 
         this.lanes = [
-            new IceLane(1, 180, -90 * speedMult, 3),   // row 1: moves left
+            new IceLane(1, 180, -90 * speedMult, 4),   // row 1: moves left
             new IceLane(2, 285, 120 * speedMult, 4),   // row 2: moves right
-            new IceLane(3, 390, -100 * speedMult, 3),  // row 3: moves left
-            new IceLane(4, 495, 110 * speedMult, 3)    // row 4: moves right
+            new IceLane(3, 390, -100 * speedMult, 4),  // row 3: moves left
+            new IceLane(4, 495, 110 * speedMult, 4)    // row 4: moves right
         ];
 
         // Add enemies
