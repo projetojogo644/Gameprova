@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #111;
+    color: #fff;
+    font-family: 'Press Start 2P', monospace, cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    width: 800px;
+    height: 650px;
+    background-color: #000;
+    border: 4px solid #fff;
+    box-shadow: 0 0 20px #0ff;
+    border-radius: 10px;
+}
+
+#ui {
+    height: 50px;
+    background-color: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-size: 12px;
+    border-bottom: 2px solid #555;
+}
+
+#stats {
+    display: flex;
+    gap: 20px;
+}
+
+#temp-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#temp-bar {
+    width: 150px;
+    height: 15px;
+    background-color: #333;
+    border: 2px solid #fff;
+}
+
+#temp-fill {
+    width: 100%;
+    height: 100%;
+    background-color: #f00;
+    transition: width 0.1s, background-color 0.1s;
+}
+
+canvas {
+    display: block;
+    background-color: #001f3f; /* Deep blue for water */
+}
+
+.overlay {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+.overlay h1 {
+    color: #0ff;
+    font-size: 40px;
+    text-shadow: 0 0 10px #0ff;
+    margin-bottom: 20px;
+}
+
+.overlay p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-family: inherit;
+    font-size: 16px;
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #000;
+    cursor: pointer;
+    box-shadow: 4px 4px 0 #0ff;
+    transition: transform 0.1s;
+}
+
+button:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 #0ff;
+}
+
+button:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 #0ff;
+}

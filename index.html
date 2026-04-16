@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui">
+            <div id="stats">
+                <span id="level-display">Level: 1</span>
+                <span id="lives-display">Lives: 3</span>
+                <span id="score-display">Score: 0</span>
+            </div>
+            <div id="temp-bar-container">
+                <div>TEMP</div>
+                <div id="temp-bar"><div id="temp-fill"></div></div>
+            </div>
+            <div id="igloo-progress">Ice: 0/15</div>
+        </div>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <div id="menu" class="overlay">
+            <h1>ARCTIC BUILDER</h1>
+            <p>Use as setas para pular e se mover.</p>
+            <p>Pule nos blocos brancos para coletar gelo.</p>
+            <p>Construa o iglu e entre nele antes de congelar!</p>
+            <button id="start-btn">INICIAR</button>
+        </div>
+        <div id="game-over" class="overlay hidden">
+            <h1 style="color: #f00;">GAME OVER</h1>
+            <p>Score: <span id="final-score">0</span></p>
+            <button id="restart-btn">TENTAR NOVAMENTE</button>
+        </div>
+        <div id="level-complete" class="overlay hidden">
+            <h1 style="color: #0f0;">NÍVEL CONCLUÍDO!</h1>
+            <p>O frio está aumentando...</p>
+            <button id="next-level-btn">PRÓXIMO NÍVEL</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
